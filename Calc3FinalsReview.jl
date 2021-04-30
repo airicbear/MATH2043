@@ -6,8 +6,17 @@ using InteractiveUtils
 
 # ╔═╡ 14ee6589-289a-44b7-ac1d-03691d46cedd
 begin
+    import Pkg
+    # activate a clean environment
+    Pkg.activate(mktempdir())
+
+    Pkg.add([
+        Pkg.PackageSpec(name="Plots"),
+        # ... keep adding your packages
+    ])
+
+    using Plots
 	using LinearAlgebra
-	using Plots
 end
 
 # ╔═╡ 5f6c2288-b320-4fd4-9b52-f1c7ef78f980
