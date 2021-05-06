@@ -1,26 +1,32 @@
 ### A Pluto.jl notebook ###
-# v0.14.4
+# v0.14.5
 
 using Markdown
 using InteractiveUtils
 
-# ╔═╡ 14ee6589-289a-44b7-ac1d-03691d46cedd
+# ╔═╡ 5f6c2288-b320-4fd4-9b52-f1c7ef78f980
 begin
     import Pkg
     # activate a clean environment
     Pkg.activate(mktempdir())
 
     Pkg.add([
-        Pkg.PackageSpec(name="Plots"),
+        Pkg.PackageSpec(name="PlutoUI", version="0.7.9"),
+        Pkg.PackageSpec(name="Plots", version="1.13.2"),
         # ... keep adding your packages
     ])
 
+	using PlutoUI
     using Plots
 	using LinearAlgebra
-end
+	
+	function Image(filepath::String)
+		@assert !isempty(filepath)
+		PlutoUI.LocalResource(joinpath(split(@__FILE__, '#')[1] * ".assets", filepath))
+	end
 
-# ╔═╡ 5f6c2288-b320-4fd4-9b52-f1c7ef78f980
-md"# Calculus III Final Exam Review
+	md"""
+# Calculus III Final Exam Review
 
 This notebook contains a set of review problem solutions for the Temple University's Calculus III final exam using the textbook *Calculus: Early Transcendentals, 8th Edition* by James Stewart.
 
@@ -48,7 +54,9 @@ The sections covered in the finals follow this order:
 - 16.4 Green's Theorem
 - 16.5 Curl and Divergence
 - 16.7 Surface Integral
-- 16.8 Stoke's Theorem"
+- 16.8 Stoke's Theorem
+"""
+end
 
 # ╔═╡ f7e71fd5-ffa6-4568-96b8-31c253f8f472
 md"## 12.2 Vectors"
@@ -66,6 +74,9 @@ c. $\overrightarrow{DB} - \overrightarrow{AB}$
 
 d. $\overrightarrow{DC} + \overrightarrow{CA} + \overrightarrow{AB}$
 "
+
+# ╔═╡ 33619db1-5424-405c-8c8a-946cd83d481d
+Image("1202P04.png")
 
 # ╔═╡ 2dd37e1d-4456-495e-8795-afc166161881
 md"
@@ -3282,9 +3293,9 @@ $$\begin{align*}
 
 # ╔═╡ Cell order:
 # ╟─5f6c2288-b320-4fd4-9b52-f1c7ef78f980
-# ╠═14ee6589-289a-44b7-ac1d-03691d46cedd
 # ╟─f7e71fd5-ffa6-4568-96b8-31c253f8f472
 # ╟─9f50fd28-ff2f-4a59-84f7-0486c66d0cce
+# ╟─33619db1-5424-405c-8c8a-946cd83d481d
 # ╟─2dd37e1d-4456-495e-8795-afc166161881
 # ╟─238a97bf-4f22-4a4a-8e82-adf98027f98a
 # ╟─093bbbab-17ac-4f9e-86f0-6bab0249e303
@@ -3301,7 +3312,7 @@ $$\begin{align*}
 # ╟─62600947-7eef-4654-8216-5c1610a8a986
 # ╟─75bf76f9-e3b3-44c2-af0b-1cf3871ed196
 # ╟─4c6612cd-7409-450c-9823-619a005f1a8c
-# ╠═2a2851c9-6f75-4593-a18b-95bf03b0ce32
+# ╟─2a2851c9-6f75-4593-a18b-95bf03b0ce32
 # ╟─cde8ecb5-1030-4ec2-beb5-c1534d4204de
 # ╟─f969c661-2d88-4a3c-aedd-d828ba8b43da
 # ╠═0838ea68-9acb-4d42-8480-59480ac7ef64
@@ -3310,9 +3321,9 @@ $$\begin{align*}
 # ╠═a40f3b0a-9ccd-48be-8330-7a1d60c7eb13
 # ╟─c7370c22-bee4-4641-a8b6-d62a08de3627
 # ╟─7caf8973-2a2f-4c4d-b6a0-ab7b17053495
-# ╟─8d6918c6-f76c-45fe-9219-33d0d4360c07
+# ╠═8d6918c6-f76c-45fe-9219-33d0d4360c07
 # ╟─5b8adf14-640e-46f8-a757-f952db4c08fc
-# ╟─d0495207-af73-41ba-9518-56774c606418
+# ╠═d0495207-af73-41ba-9518-56774c606418
 # ╟─bc30141d-9798-411a-a1bf-6acd951603b4
 # ╟─6201b777-8a0b-474d-895b-52fb0d52a917
 # ╟─6672cacf-8f19-4f64-b58a-94cde4a17b60
@@ -3504,7 +3515,7 @@ $$\begin{align*}
 # ╟─f175263d-d133-4712-bc53-46d98601e814
 # ╟─8fb50f5e-ce95-4f96-91b4-67d88f19478f
 # ╟─18b7e78a-5a71-43a5-bde0-1d46b3a50fd8
-# ╠═c5aeeff3-56e5-4f9c-8313-e416290669cf
+# ╟─c5aeeff3-56e5-4f9c-8313-e416290669cf
 # ╟─96e5812d-6192-46e5-afa4-16a2e863ddac
 # ╟─bd563fcd-9b54-4d95-8474-1427e69462f0
 # ╟─db9995ec-6139-4eb4-a971-bd6e103909cd
