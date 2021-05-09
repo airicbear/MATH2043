@@ -37,6 +37,13 @@ The following chapters are covered in the finals:
 - 14: Partial Derivatives
 - 15: Multiple Integrals
 - 16: Vector Calculus
+"""
+end
+
+# ╔═╡ de91d8cf-fcc9-4d78-ac7c-9f2727699772
+begin
+	md"""
+
 
 The sections covered in the finals follow this order:
 - 12.2 Vectors
@@ -57,6 +64,9 @@ The sections covered in the finals follow this order:
 - 16.8 Stoke's Theorem
 """
 end
+
+# ╔═╡ 597a888c-787f-4d1b-940d-8a437a96cbbb
+PlutoUI.TableOfContents(aside=true)
 
 # ╔═╡ f7e71fd5-ffa6-4568-96b8-31c253f8f472
 md"## 12.2 Vectors"
@@ -3293,6 +3303,8 @@ $$\begin{align*}
 
 # ╔═╡ Cell order:
 # ╟─5f6c2288-b320-4fd4-9b52-f1c7ef78f980
+# ╟─de91d8cf-fcc9-4d78-ac7c-9f2727699772
+# ╟─597a888c-787f-4d1b-940d-8a437a96cbbb
 # ╟─f7e71fd5-ffa6-4568-96b8-31c253f8f472
 # ╟─9f50fd28-ff2f-4a59-84f7-0486c66d0cce
 # ╟─33619db1-5424-405c-8c8a-946cd83d481d
@@ -3323,7 +3335,7 @@ $$\begin{align*}
 # ╟─7caf8973-2a2f-4c4d-b6a0-ab7b17053495
 # ╠═8d6918c6-f76c-45fe-9219-33d0d4360c07
 # ╟─5b8adf14-640e-46f8-a757-f952db4c08fc
-# ╠═d0495207-af73-41ba-9518-56774c606418
+# ╟─d0495207-af73-41ba-9518-56774c606418
 # ╟─bc30141d-9798-411a-a1bf-6acd951603b4
 # ╟─6201b777-8a0b-474d-895b-52fb0d52a917
 # ╟─6672cacf-8f19-4f64-b58a-94cde4a17b60
